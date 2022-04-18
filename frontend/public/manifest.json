@@ -1,0 +1,20 @@
+{
+  "short_name": "Callapp",
+  "name": "Jssip Callapp (js-sip-webapp)",
+  "icons": [
+    {
+      "src": "minhcallapp64x64.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "minhcallapp.ico",
+      "type": "image/png",
+      "sizes": "256x256"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

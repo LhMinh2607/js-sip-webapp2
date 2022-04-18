@@ -1,0 +1,624 @@
+html { height:100%; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.row.center{
+  justify-content: center;
+}
+
+.row.left{
+  /* justify-content: left; */
+  justify-content: flex-start;
+}
+
+.row.right{
+  /* justify-content: right; */
+  justify-content: flex-end;
+}
+
+.row.top{
+  align-items: flex-start;
+}
+
+.row-bottom{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.row.inline{
+  display: inline-flex;
+}
+
+.col-0{
+  flex: 1 1 0vh;
+  padding: 1vh;
+}
+
+.col-1{
+  flex: 1 1 10vh;
+  padding: 1vh;
+}
+
+.col-2{
+  flex: 2 1 50vh;
+}
+
+.keyNum{
+  width: 100%;
+  max-width: 14vh;
+  min-width: 2rem;
+  height: 14vh;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+  font-size: 2vh;
+  display: inline-block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: calc(32% - 1rem);
+  margin: 5px;
+  background: transparent;
+}
+
+.keyNum:hover{
+  transition: 0.2s;
+  color: #673ab7;
+  background-color: #fff;
+  border-radius: 2rem;
+}
+
+.keyNum:active{
+  transition: 0.2s;
+  color: #fff;
+  background-color: #38127a;
+}
+
+.keyBackspace{
+  height: 14vh;
+  max-width: 14vh;
+}
+
+.keyPad{
+  background-color: #673ab7;
+  opacity: 75%;
+  width: 100%;
+  border: 1px solid black;
+  display:-moz-inline-block;
+  display:-moz-inline-box;
+  display: inline-block;
+  height: 100vh;
+  min-width: 10rem;
+  max-width: 35rem;
+  background:
+      linear-gradient(rgb(111, 0, 255), transparent),
+      linear-gradient(to top left, lime, transparent),
+      linear-gradient(to top right, rgb(0, 140, 255), transparent);
+  background-blend-mode: screen;
+}
+
+.spectrum-background {
+  background:
+      linear-gradient(red, transparent),
+      linear-gradient(to top left, lime, transparent),
+      linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+}
+
+.keyRow{
+  width: 100%;
+  text-align: center;
+  min-width: 3rem;
+  font-size: 2vh;
+}
+
+.keyContent{
+  padding: 1vh;
+  font-size: 4vh;
+}
+
+.keyContent.sub{
+  padding: 1vh;
+  font-size: 2vh !important;
+}
+
+
+.callButton{
+  border: 0rem;
+  border-radius: 10rem;
+  background-color: #14ad21;
+  color: #fff;
+  width: 100%;
+  max-width: 30vh;
+  min-width: 2rem;
+  height: 6vh;
+  font-size: 3vh;
+}
+
+.callButton:hover{
+  background-color: #94d699;
+  transition: 0.2s;
+  color: #14ad21;
+  border-radius: 1rem;
+  border-radius: 1rem;
+}
+
+.callButton:active{
+  background-color: #94d699;
+  transition: 0.2s;
+  color: #14ad21;
+}
+
+.padding{
+  padding-bottom: 1rem;
+}
+
+
+input.inputBox{
+  background-color: #fff;
+  padding: 4vh;
+  border-radius: 4vh;
+  width: 100%;
+  box-sizing:border-box;
+  font-size: 3vh;
+}
+
+input{
+  padding: 1vh;
+  width: 20vh;
+  height: 2vh;
+  font-size: 3vh;
+  margin: 1vh;
+  text-align: center;
+  border: 0rem;
+  background-color: transparent;
+}
+
+input.phoneNum {
+  text-shadow: 0 0 50px #14ad21,
+               0 0 50px #14ad21,
+               0 0 50px #14ad21,
+               0 0 50px #14ad21,
+               0 0 50px #14ad21,
+               0 0 50px #14ad21,
+               0 0 50px #14ad21,
+               0 0 50px #14ad21,
+               0 0 50px #14ad21,
+               0 0 50px #14ad21;
+  color: #fff;
+  font-size: 6vh;
+  width: 35vh;
+  height: 10vh;
+}
+
+input.inputBoxS{
+  background-color: #fff;
+  padding: 4vh;
+  border-radius: 4vh;
+  width: 100%;
+  box-sizing:border-box;
+  font-size: 2vh;
+}
+
+input.searchBar{
+  background-color: #fff;
+  width: 100%;
+  border-radius: 1vh;
+  border: 0rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.optionBtn{
+  width: 100%;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+  font-size: large;
+  display: inline-block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: calc(32% - 1rem);
+  height: 14vh;
+  background: transparent;
+  width: 14vh;
+  text-align: center;
+}
+
+.optionBtn:hover{
+  background-color: #ffffff;
+  transition: 0.2s;
+  color: #2d296d;
+  border-radius: 1rem;
+}
+
+.contentRow{
+  padding: 2vh;
+  color: #fff;
+  font-size: 4vh;
+  height: 4vh;
+}
+
+.contentRow.displayNumber{
+  padding: 3rem;
+  color: #fff;
+  font-size: 8vh;
+}
+
+.keyPad.calling{
+  height: 100vh;
+}
+
+.keyNum.round{
+  border: 0.2rem solid rgb(150, 145, 145);
+  border-radius: 5rem;
+  width: 10vh;
+  height: 10vh;
+}
+
+.keyNum.round:hover{
+  background-color: #fff;
+  transition: 0.1s;
+  border: 0rem;
+}
+
+.popup{
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9000;
+  padding: 3vh 3vh 3vh 3vh;
+  color: #fff;
+  border-radius: 2vh;
+  font-size: 3vh;
+  width: 30vh;
+  position: absolute;
+  opacity: 100%;
+  background:
+    linear-gradient(rgb(10, 66, 139), transparent),
+    linear-gradient(to top, rgb(50, 122, 218), transparent),
+    linear-gradient(to bottom, rgb(127, 194, 248), transparent);
+  
+  animation: zoomPopup 0.7s;
+}
+
+.popup.info{
+  background-color:rgb(43, 110, 197);
+  padding: 0vh 3vh 3vh 3vh;
+}
+
+.popup.error{
+  background-color:rgb(182, 70, 62);
+}
+
+.popup.option{
+  background-color:rgb(43, 110, 197);
+  padding: 0vh 3vh 3vh 3vh;
+}
+
+.popup.hangup{
+  background-color: rgb(180, 35, 35);
+}
+
+@keyframes zoomPopup {
+  0%{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1); 
+    opacity: 50%; 
+  }
+  50%{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.4);  
+    opacity: 80%;
+  }
+}
+
+@keyframes slideUpPopup {
+  from { bottom: 0; }
+  to {
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform: translateX(50%);
+  }
+}
+
+.confirmBtn{
+  border: 0rem;
+  background-color: rgb(4, 255, 129);
+  color: #000000;
+  padding: 2vh 4vh 2vh 4vh;
+  border-radius: 2vh;
+  font: 3vh solid;
+  margin-top: 2vh;
+  width: 20vh;
+}
+
+.confirmBtn:hover{
+  transition: 0.2s;
+  background-color: rgb(1, 148, 74);
+  color: #353535;
+  box-shadow: #353535 2rem;
+}
+
+.confirmBtn.xClose{
+  text-align: center;
+  background-color: rgb(255, 0, 0);
+  color: #ffffff;
+  padding: 2vh;
+  border-radius: 5vh;
+  font: 2vh solid;
+  transform: translate(4vh, -4vh);
+  width: 8vh;
+  height: 8vh;
+}
+
+.confirmBtn.info{
+  background-color: rgb(4, 255, 129);
+  color: #fff;
+}
+
+.confirmBtn.info:hover{
+  background-color: rgb(1, 146, 74);
+  color: #fff;
+}
+
+/*From Popup Component reactjs-popup*/
+.popup-content {
+  margin: auto;
+  background: transparent !important;
+  border: 0rem !important;
+  width: auto !important;
+  padding: 0rem !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.callButton.red{
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.callButton.dial{
+  width: 5rem;
+}
+
+.hangupIcon{
+  transform: rotate(135deg);
+}
+
+.homeBackground{
+  text-align: center;
+  background-color: #38127a;
+}
+
+.invisi{
+  visibility: hidden;
+}
+
+.popupCoverup{
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  position: absolute;
+  opacity: 50%;
+  top: 50%;  
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+button.submitBtn{
+  border-radius: 4vh;
+  width: 100%;
+  height: 10vh;
+  background-color: #673ab7;
+  color: #fff;
+  font-size: 5vh;
+  border: 0rem;
+}
+
+button.submitBtn:hover{
+  border-radius: 4vh;
+  background-color: #fff;
+  color: #673ab7;
+  transition: 0.2s;
+}
+
+.scrollable{
+  overflow-y: scroll;
+}
+
+table{
+  margin-top: 2vh;
+  width: 100%;
+  background-color: #0fa7ff;
+  background:
+      linear-gradient(rgb(10, 133, 190), transparent),
+      linear-gradient(to top left, rgb(53, 171, 226), transparent),
+      linear-gradient(to top right, rgb(15, 84, 235), transparent);
+  color: #fff;
+}
+
+thead, tbody { display: block; }
+
+tbody {
+  height: 64vh;       
+  overflow-y: auto;    
+  overflow-x: hidden;
+  width: 100%;
+}
+
+thead {
+  height: 4vh;
+  width: 100%;
+  padding-bottom: 4vh;
+}
+
+tbody td{
+  width: 100vh;
+  font-size: 2vh;
+}
+
+thead th {
+  width: 33vh;
+  font-size: 2.5vh;
+  background-color: #8a4ef3;
+}
+
+tr:nth-child(even){
+ background:
+      linear-gradient(rgb(46, 215, 245), transparent),
+      linear-gradient(to top left, rgb(77, 197, 245), transparent),
+      linear-gradient(to top right, rgb(0, 140, 255), transparent);
+}
+
+.fixedHeight{
+  height: 10vh !important;
+}
+
+.confirmBtn.back{
+  color: #fff;
+  background-color: #8a4ef3;
+}
+
+.confirmBtn.back:hover{
+  color: #fff;
+  background-color: #693db6;
+}
+
+.timer{
+  color: #fff;
+  height: 20vh !important;
+}
+
+.timer > span{
+  font-size: 4vh;
+}
+
+.confirmBtn{
+  color: #fff;
+}
+
+
+/*can't use responsive text here. Bigger screen must display more texts*/
+.displayNameContact{
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.displayNumberContact{
+  color: #fff;
+  font-size: 1rem;
+}
+
+.scrollableDiv{
+  overflow-y: scroll;
+  height: 70vh;       
+  overflow-y: auto;    
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.callStartedIcon{
+  color: #fff;
+}
+
+.callStartedIcon > .fa-arrow-up{
+  color:rgb(45, 235, 140);
+  font-size: 0.7rem;
+  transform: rotate(45deg);
+
+}
+
+.callReceivedIcon> .fa-arrow-up{
+  color:rgb(45, 235, 140);
+  transform: translate(2rem, -2rem);
+  transform: rotate(-145deg);
+}
+
+.callNotPickedUpIcon> .fa-ban{
+  color:#ff0000;
+  font-size: 0.7rem;
+
+}
+
+.callNoData> .fa-question{
+  color: #ffc815;
+  font-size: 0.7rem;
+}
+
+.toolTip{
+  width: 10rem;
+  height: 2rem;
+  color:#000000;
+  background-color: #fff;
+  visibility: hidden;
+  border: solid 1rem;
+}
+
+.contactMenuBtn{
+  width: 4vh;
+  color: #fff;
+  height: 4vh;
+  border-radius: 2vh;
+  font-size: 2vh;
+  background-color: #14ad21;
+  border: 0rem;
+}
+
+.contactMenuBtn:hover{
+  filter: brightness(50%);
+  transition: 0.2s;
+  border-radius: 1vh;
+}
+
+.contactMenuBtn.remove{
+  background: #ff0000;
+}
+
+.contactMenuBtn.edit{
+  background: #00273d;
+}
+
+.default{
+  border-top: 1px solid rgb(8, 120, 224);
+  width: 80%;
+}
+
+.pan{
+  height: 30vh;
+}

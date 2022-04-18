@@ -1,0 +1,33 @@
+{
+  "type": "module",
+  "name": "js-sip-webapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "jssip": "^3.9.0",
+    "jssip-node-websocket": "^3.0.0",
+    "mongoose": "^6.2.3",
+    "node-polyfill-webpack-plugin": "^1.1.4",
+    "nodemon": "^2.0.15",
+    "webpack": "^5.0.0"
+  },
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --es-module-specifier-resolution=node backend/server.js"
+  },
+  "devDependencies": {
+    "webpack-dev-middleware": "^5.3.1",
+    "webpack-hot-middleware": "^2.25.1"
+  }
+}

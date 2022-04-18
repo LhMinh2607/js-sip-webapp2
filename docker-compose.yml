@@ -1,0 +1,33 @@
+version: "3.3"
+services:
+  js-sip-webapp-frontend:
+    image: js-sip-webapp-frontend
+    build: ./frontend
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    networks:
+      - js-sip-webapp
+  js-sip-webapp-backend:
+    image: js-sip-webapp-backend
+    build: ./backend
+    ports:
+      - "5000:5000"
+    networks:
+      - js-sip-webapp
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:4.4-bionic
+    ports:
+      - "27017:27017"
+    networks:
+      - js-sip-webapp
+    volumes:
+      - mongo-data:/data/db
+networks:
+  js-sip-webapp:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local
